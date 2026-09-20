@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        180deg,
+        #fff8c9,
+        #fff1a8,
+        #ffe680
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    overflow: hidden;
+}
+
+.contenedor {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #d99a00;
+    font-size: 50px;
+    margin-bottom: 10px;
+
+    animation: aparecer 2s ease;
+}
+
+.mensaje {
+    color: #795548;
+    font-size: 22px;
+    margin-bottom: 40px;
+
+    animation: aparecer 3s ease;
+}
+
+.jardin {
+    position: relative;
+
+    width: 650px;
+    height: 400px;
+
+    margin: auto;
+}
+
+/* =========================
+        FLORES
+========================= */
+
+.flor {
+    position: absolute;
+
+    width: 150px;
+    height: 350px;
+
+    bottom: 0;
+
+    animation: balanceo 4s ease-in-out infinite;
+}
+
+.flor1 {
+    left: 70px;
+}
+
+.flor2 {
+    left: 250px;
+    transform: scale(1.2);
+    animation-delay: .5s;
+}
+
+.flor3 {
+    left: 450px;
+    animation-delay: 1s;
+}
+
+/* =========================
+        PÉTALOS
+========================= */
+
+.petalos {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    top: 20px;
+    left: 10px;
+
+    z-index: 3;
+}
+
+.petalos span {
+    position: absolute;
+
+    width: 45px;
+    height: 70px;
+
+    background: linear-gradient(
+        135deg,
+        #fff700,
+        #ffc400
+    );
+
+    border-radius: 50%;
+
+    top: 30px;
+    left: 43px;
+
+    transform-origin: 22px 35px;
+
+    box-shadow:
+        0 0 8px rgba(255, 193, 7, .5);
+}
+
+/* Rotación de cada pétalo */
+
+.petalos span:nth-child(1) {
+    transform: rotate(0deg) translateY(-30px);
+}
+
+.petalos span:nth-child(2) {
+    transform: rotate(45deg) translateY(-30px);
+}
+
+.petalos span:nth-child(3) {
+    transform: rotate(90deg) translateY(-30px);
+}
+
+.petalos span:nth-child(4) {
+    transform: rotate(135deg) translateY(-30px);
+}
+
+.petalos span:nth-child(5) {
+    transform: rotate(180deg) translateY(-30px);
+}
+
+.petalos span:nth-child(6) {
+    transform: rotate(225deg) translateY(-30px);
+}
+
+.petalos span:nth-child(7) {
+    transform: rotate(270deg) translateY(-30px);
+}
+
+.petalos span:nth-child(8) {
+    transform: rotate(315deg) translateY(-30px);
+}
+
+/* =========================
+        CENTRO
+========================= */
+
+.centro {
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    background:
+        radial-gradient(
+            circle,
+            #8b4d00 10%,
+            #6b3500 40%,
+            #4d2600 100%
+        );
+
+    border-radius: 50%;
+
+    top: 57px;
+    left: 47px;
+
+    z-index: 5;
+
+    box-shadow:
+        0 0 0 5px #e3a900;
+}
+
+/* =========================
+        TALLO
+========================= */
+
+.tallo {
+    position: absolute;
+
+    width: 12px;
+    height: 230px;
+
+    background: linear-gradient(
+        90deg,
+        #236b16,
+        #48a52d,
+        #236b16
+    );
+
+    top: 110px;
+    left: 69px;
+
+    border-radius: 10px;
+
+    z-index: 1;
+}
+
+/* =========================
+        HOJAS
+========================= */
+
+.hoja {
+    position: absolute;
+
+    width: 70px;
+    height: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #3d941f,
+        #75c943
+    );
+
+    border-radius: 100% 0 100% 0;
+
+    z-index: 2;
+}
+
+.hoja1 {
+    top: 210px;
+    left: 5px;
+
+    transform: rotate(-25deg);
+}
+
+.hoja2 {
+    top: 260px;
+    left: 65px;
+
+    transform: rotate(25deg) scaleX(-1);
+}
+
+/* =========================
+        BOTÓN
+========================= */
+
+button {
+    margin-top: 20px;
+
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #f5b400;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+
+    background: #e19f00;
+}
+
+#sorpresa {
+    margin-top: 20px;
+
+    color: #9b6800;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    min-height: 30px;
+}
+
+/* =========================
+        ANIMACIONES
+========================= */
+
+@keyframes balanceo {
+
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .mensaje {
+        font-size: 18px;
+    }
+
+    .jardin {
+        transform: scale(.7);
+        width: 650px;
+        margin-left: -125px;
+    }
+
+    button {
+        margin-top: -20px;
+    }
+}
