@@ -6,7 +6,7 @@ let activado = false;
 boton.addEventListener("click", () => {
 
     sorpresa.textContent =
-        "Que nunca te falten motivos para sonreír 💛🌻";
+        "Que nunca te falten motivos para sonreír Juliana  💛🌻";
 
     boton.innerHTML =
         "💛 Estas flores son para ti 🌻";
@@ -21,7 +21,7 @@ boton.addEventListener("click", () => {
     if (!activado) {
 
         escribirMensaje(
-            "Porque te mereces cosas bonitas y muchos motivos para sonreír ✨"
+            "Porque te mereces cosas bonitas y muchos motivos para sonreír Juliana  ✨"
         );
 
         activado = true;
